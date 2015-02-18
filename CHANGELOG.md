@@ -1,5 +1,9 @@
 ## ChangeLog for get_mysql_stats
 
+## 2.6
+
+  * Fix "Use of uninitialized value $time in numeric gt" error
+
 ## 2.5
 
   * Changed how checking for support of innodb is done

@@ -45,7 +45,7 @@ use DBI;
 use Math::BigInt;
 
 my $program_name = $0;
-my $version_num = "2.5";
+my $version_num = "2.6";
 my %options;
 my %status;
 my %engines;
@@ -584,6 +584,11 @@ sub get_data{
       my $host = $hash_ref->{'Host'};
       my $command = $hash_ref->{'Command'};
       my $time = $hash_ref->{'Time'};
+      
+      if ( ! $time ){
+        $time = 0;
+      }
+      
       my $state = $hash_ref->{'State'};
       if ( ! $state ){
         $state = 'none';
